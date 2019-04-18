@@ -2,29 +2,29 @@
 <html lang="en">
 
 <head>
-
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  
   <title>Bare - Start Bootstrap Template</title>
-
+  
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Start Bootstrap</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -53,52 +53,63 @@
   <div class="row">
     <div class="col-lg-12 text-center">
       <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+      
+      <video id='my-video3' class='video-js my-videos' muted loop preload='auto' width='640' height='264'
+      poster='' data-setup='{"fluid": true}'>
+      <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
+      <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
+      <p class='vjs-no-js'>
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+      </p>
+    </video>
+    
+    <video id='my-video2' class='video-js my-videos' muted loop preload='auto' width='640' height='264'
+    poster='' data-setup='{"fluid": true}'>
+    <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
+    <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
+    <p class='vjs-no-js'>
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+    </p>
+  </video>
+  
+  <video id='my-video1' class='video-js my-videos' muted loop preload='auto' width='640' height='264'
+  poster='' data-setup='{"fluid": true}'>
+  <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
+  <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
+  <p class='vjs-no-js'>
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+  </p>
+</video>
 
-      <video id='my-video2' class='video-js vjs-big-play-centered' muted loop preload='auto' width='640' height='264'
-             poster='http://funlexia.com/wp-content/uploads/2012/03/Handshake-vs.-Hug.jpg' data-setup='{"fluid": true}'>
-        <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
-        <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
-        <p class='vjs-no-js'>
-          To view this video please enable JavaScript, and consider upgrading to a web browser that
-          <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
-        </p>
-      </video>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" id="btn-channel-1">1</button>
+  <button type="button" class="btn btn-secondary" id="btn-channel-2">2</button>
+  <button type="button" class="btn btn-secondary" id="btn-channel-3">3</button>
+  <button type="button" class="btn btn-secondary" id="btn-play">PLAY</button>
+</div>
 
-      <video id='my-video1' class='video-js vjs-big-play-centered' muted loop preload='auto' width='640' height='264'
-             poster='http://funlexia.com/wp-content/uploads/2012/03/Handshake-vs.-Hug.jpg' data-setup='{"fluid": true}'>
-        <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
-        <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
-        <p class='vjs-no-js'>
-          To view this video please enable JavaScript, and consider upgrading to a web browser that
-          <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
-        </p>
-      </video>
-
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary" id="btn-channel-1">1</button>
-        <button type="button" class="btn btn-secondary" id="btn-channel-2">2</button>
-        <button type="button" class="btn btn-secondary" id="btn-channel-3">3</button>
-      </div>
-
-    </div>
-  </div>
+</div>
+</div>
 </div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
 
 <script>
   var currentChannel = 1;
-  var loadStatus = [false, false]
+  var loadStatus = [false, false, false]
   var player1 = videojs("my-video1", {
     controls:true,
     fluid: true,
@@ -107,12 +118,11 @@
       fullscreenToggle: false,
       controls:false,
       children: [
-        "currentTimeDisplay",
-        "timeDivider",
-        "durationDisplay",
-        "progressControl",
-
-        "remainingTimeDisplay" //ensure we show the remaining time display here
+      "currentTimeDisplay",
+      "timeDivider",
+      "durationDisplay",
+      "progressControl",
+      "remainingTimeDisplay" //ensure we show the remaining time display here
       ]
     }
   })
@@ -124,15 +134,31 @@
       fullscreenToggle: false,
       controls:false,
       children: [
-        "currentTimeDisplay",
-        "timeDivider",
-        "durationDisplay",
-        "progressControl",
-        "remainingTimeDisplay" //ensure we show the remaining time display here
+      "currentTimeDisplay",
+      "timeDivider",
+      "durationDisplay",
+      "progressControl",
+      "remainingTimeDisplay" //ensure we show the remaining time display here
       ]
     }
   })
-  var players = [player1, player2]
+  var player3 = videojs("my-video3", {
+    controls:true,
+    fluid: true,
+    autoplay: false,
+    controlBar: {
+      fullscreenToggle: false,
+      controls:false,
+      children: [
+      "currentTimeDisplay",
+      "timeDivider",
+      "durationDisplay",
+      "progressControl",
+      "remainingTimeDisplay" //ensure we show the remaining time display here
+      ]
+    }
+  })
+  var players = [player1, player2, player3]
   player1.ready(function () {
     player1.tech_.off('dblclick');
     console.log('ready ',1)
@@ -155,18 +181,47 @@
       })
     }
   });
-
-
+  player3.ready(function () {
+    player3.tech_.off('dblclick');
+    console.log('ready ',3)
+    loadStatus[2] = true
+    console.log(loadStatus.indexOf(false))
+    if (loadStatus.indexOf(false) < 0) {
+      players.forEach(player => {
+        console.log(player)
+        //player.play()
+      })
+    }
+  });
+  
+  
   // myPlayer.bufferedPercent();
-
-
+  
+  
   $(document).ready(function () {
-    $('#my-video2').width($('#my-video2').height * 1.78);
+    /* $('#my-video2').width($('#my-video2').height * 1.78);
     $('video').click(function( event ) {
       event.stopImmediatePropagation();
+    }); */
+    
+    $("#btn-play").click(function () {
+      console.log("Play called.");
+      if (players[0].paused()) {
+        $("#btn-play").html("PAUSE")
+        players.forEach(player => {
+          player.play()
+        })
+      } else {
+        $("#btn-play").html("PLAY")
+        players.forEach(player => {
+          player.pause()
+        })
+      }
+      
     });
+    
   });
-
+  
   $("#btn-channel-1").click(function () {
     console.log("Handler for 1 called.");
     if (currentChannel != 1) {
@@ -176,7 +231,7 @@
       $("#my-video3").css("z-index", "10");
     }
   });
-
+  
   $("#btn-channel-2").click(function () {
     console.log("Handler for .2 called.");
     if (currentChannel != 2) {
@@ -186,7 +241,7 @@
       $("#my-video3").css("z-index", "10");
     }
   });
-
+  
   $("#btn-channel-3").click(function () {
     console.log("Handler for 3 called.");
     if (currentChannel != 3) {
