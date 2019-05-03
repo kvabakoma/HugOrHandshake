@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   
-  <title>Bare - Start Bootstrap Template</title>
+  <title>Hug or Handshake</title>
   
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,7 +22,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="#">Hug or Handshake</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
       aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,18 +30,18 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a class="nav-link" href="#">Btn1
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Btn2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="#">Btn3</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#">Btn4</a>
         </li>
       </ul>
     </div>
@@ -51,14 +51,14 @@
 <!-- Page Content -->
 <div class="container">
   <div class="row">
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center" id="title">
       <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
     </div>
-
+    
     <div class="col-md-12 text-center" id="video-container">
       <video id='my-video3' class='video-js my-videos' playsinline muted loop preload='auto' width='640' height='264' poster='' data-setup='{"fluid": true}'>
-        <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
-        <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
+        <source src='assets\video\sampleVid1.mp4' type='video/mp4'/>
+        <!-- <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/> -->
         <p class='vjs-no-js'>
           To view this video please enable JavaScript, and consider upgrading to a web browser that
           <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
@@ -66,8 +66,8 @@
       </video>
       
       <video id='my-video2' class='video-js my-videos' playsinline muted loop preload='auto' width='640' height='264' poster='' data-setup='{"fluid": true}'>
-        <source src='assets\video\small.mp4' type='video/mp4'/>
-        <source src='assets\video\small.webm' type='video/webm'/>
+        <source src='assets\video\sampleVid2.mp4' type='video/mp4'/>
+        <!-- <source src='assets\video\small.webm' type='video/webm'/> -->
         <p class='vjs-no-js'>
           To view this video please enable JavaScript, and consider upgrading to a web browser that
           <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
@@ -75,8 +75,8 @@
       </video>
       
       <video id='my-video1' class='video-js my-videos' playsinline muted loop preload='auto' width='640' height='264' poster='' data-setup='{"fluid": true}'>
-        <source src='assets\video\SampleVideo_1280x720_5mb.mp4' type='video/mp4'/>
-        <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/>
+        <source src='assets\video\sampleVid3.mp4' type='video/mp4'/>
+        <!-- <source src='assets\video\SampleVideo_1280x720_5mb.webm' type='video/webm'/> -->
         <p class='vjs-no-js'>
           To view this video please enable JavaScript, and consider upgrading to a web browser that
           <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
@@ -108,6 +108,7 @@ crossorigin="anonymous"></script>
 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 crossorigin="anonymous"></script>
 <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+<script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
 
 <script>
   var currentChannel = 1;
@@ -190,7 +191,7 @@ crossorigin="anonymous"></script>
     console.log(loadStatus.indexOf(false))
     if (loadStatus.indexOf(false) < 0) {
       players.forEach(player => {
-        console.log(player)
+        // console.log(player)
         //player.play()
       })
     }
@@ -201,15 +202,20 @@ crossorigin="anonymous"></script>
   
   
   $(document).ready(function () {
-    /* $('#my-video2').width($('#my-video2').height * 1.78);
-    $('video').click(function( event ) {
-      event.stopImmediatePropagation();
-    }); */
-
+    
+    // FULLSCREEN
+    var isFullScreen = false;
     $("#btn-toggle-fullscreen").click(function () {
-      $( "#video-container" ).toggleClass("video-front")
+      if (isFullScreen) {
+        $( "#video-container" ).removeClass("video-front rotated90")
+      } else {
+        $( "#video-container" ).addClass("video-front")
+        if (window.innerHeight > window.innerWidth) $( "#video-container" ).addClass("rotated90")
+      }
+      isFullScreen = !isFullScreen;
     });
     
+    // PLAY / PAUSE
     $("#btn-play").click(function () {
       console.log("Play called.");
       if (players[0].paused()) {
@@ -226,37 +232,49 @@ crossorigin="anonymous"></script>
       
     });
     
-  });
+    // SWITCH CHANNEL
+    $("#btn-channel-1").click(function () {
+      console.log("Handler for 1 called.");
+      if (currentChannel != 1) {
+        currentChannel = 1;
+        $("#my-video1").css("z-index", "20");
+        $("#my-video2").css("z-index", "10");
+        $("#my-video3").css("z-index", "10");
+      }
+    });
+    
+    $("#btn-channel-2").click(function () {
+      console.log("Handler for .2 called.");
+      if (currentChannel != 2) {
+        currentChannel = 2;
+        $("#my-video1").css("z-index", "10");
+        $("#my-video2").css("z-index", "20");
+        $("#my-video3").css("z-index", "10");
+      }
+    });
+    
+    $("#btn-channel-3").click(function () {
+      console.log("Handler for 3 called.");
+      if (currentChannel != 3) {
+        currentChannel = 3;
+        $("#my-video1").css("z-index", "10");
+        $("#my-video2").css("z-index", "10");
+        $("#my-video3").css("z-index", "20");
+      }
+    });
+    
+    // SCREEN RESIZE
+    /* $( window ).resize(function() {
+      console.log(window.innerWidth, window.innerHeight);
+    }); */
+    $( window ).on( "orientationchange", function( event ) {
+      console.log(event.orientation)
+      if (isFullScreen) $( "#video-container" ).toggleClass("rotated90")
+      // $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+    });
+    $( window ).orientationchange();
+  });  
   
-  $("#btn-channel-1").click(function () {
-    console.log("Handler for 1 called.");
-    if (currentChannel != 1) {
-      currentChannel = 1;
-      $("#my-video1").css("z-index", "20");
-      $("#my-video2").css("z-index", "10");
-      $("#my-video3").css("z-index", "10");
-    }
-  });
-  
-  $("#btn-channel-2").click(function () {
-    console.log("Handler for .2 called.");
-    if (currentChannel != 2) {
-      currentChannel = 2;
-      $("#my-video1").css("z-index", "10");
-      $("#my-video2").css("z-index", "20");
-      $("#my-video3").css("z-index", "10");
-    }
-  });
-  
-  $("#btn-channel-3").click(function () {
-    console.log("Handler for 3 called.");
-    if (currentChannel != 3) {
-      currentChannel = 3;
-      $("#my-video1").css("z-index", "10");
-      $("#my-video2").css("z-index", "10");
-      $("#my-video3").css("z-index", "20");
-    }
-  });
 </script>
 </body>
 

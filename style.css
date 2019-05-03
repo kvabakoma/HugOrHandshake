@@ -49,6 +49,20 @@ body, html {
   padding: 0;
 }
 
+.rotated90 {
+  position: fixed;
+  width:100vh;
+  height:100vw;
+  top:0px;
+  left:100%;
+  transform-origin: left top;
+  -ms-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  -ms-transform: rotate(90deg); 
+  -webkit-transform: rotate(90deg); 
+  transform: rotate(90deg);
+}
+
 /* #video-container {
   -ms-transform: rotate(90deg); 
   -webkit-transform: rotate(90deg); 
