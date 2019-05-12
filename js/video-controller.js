@@ -1,6 +1,6 @@
 var currentChannel = 1;
 var loadStatus = [false, false, false]
-var player1 = videojs("my-video1", {
+var player1 = videojs("my-video1"/* , {
     controls:true,
     fluid: true,
     autoplay: false,
@@ -15,8 +15,8 @@ var player1 = videojs("my-video1", {
             "remainingTimeDisplay" //ensure we show the remaining time display here
         ]
     }
-})
-var player2 = videojs("my-video2", {
+} */)
+var player2 = videojs("my-video2"/* , {
     controls:true,
     fluid: true,
     autoplay: false,
@@ -31,8 +31,8 @@ var player2 = videojs("my-video2", {
             "remainingTimeDisplay" //ensure we show the remaining time display here
         ]
     }
-})
-var player3 = videojs("my-video3", {
+} */)
+var player3 = videojs("my-video3"/* , {
     controls:true,
     fluid: true,
     autoplay: false,
@@ -47,7 +47,7 @@ var player3 = videojs("my-video3", {
             "remainingTimeDisplay" //ensure we show the remaining time display here
         ]
     }
-})
+} */)
 var players = [player1, player2, player3]
 player1.ready(function () {
     player1.tech_.off('dblclick');
@@ -106,12 +106,12 @@ $(document).ready(function () {
     $("#btn-play").click(function () {
         console.log("Play called.");
         if (players[0].paused()) {
-            $("#btn-play").html("PAUSE")
+            $("#btn-play").html('<i class="fa fa-pause"></i>')
             players.forEach(player => {
                 player.play()
             })
         } else {
-            $("#btn-play").html("PLAY")
+            $("#btn-play").html('<i class="fa fa-play"></i>')
             players.forEach(player => {
                 player.pause()
             })
