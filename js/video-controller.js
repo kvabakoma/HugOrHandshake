@@ -89,6 +89,7 @@ player3.ready(function () {
 
 
 $(document).ready(function () {
+    console.log("doc ready");
     
     // FULLSCREEN
     var isFullScreen = false;
@@ -154,10 +155,10 @@ $(document).ready(function () {
     /* $( window ).resize(function() {
         console.log(window.innerWidth, window.innerHeight);
     }); */
-    /* $( window ).on( "orientationchange", function( event ) {
+    $( window ).on( "orientationchange", function( event ) {
         console.log(event.orientation)
         if (isFullScreen) $( "#video-container" ).toggleClass("rotated90")
         // $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
     });
-    $( window ).orientationchange(); */
+    $( window ).orientationchange();
 }); 
